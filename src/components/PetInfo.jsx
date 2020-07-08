@@ -1,12 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import Login from '../pages/Login';
 
 const PetInfo = props => {
+  const [adopt, setAdopt] = useState(false)
   return(
     <div className="PetInfo">
       <div className="PetInfo-container">
         <div className="PetInfo-content">
           <div className="PetInfo-avatar">
-            <img src={props.pet.photo} alt={props.pet.name}/>
+            <img src={props.pet.photoURL} alt={props.pet.name}/>
           </div>
           <div className="PetInfo-profile">
             <h2>{props.pet.name}</h2>
@@ -21,16 +24,27 @@ const PetInfo = props => {
               </i>
             </p>
             <div className="PetInfo-type">
-              <button>Adoptar</button>
+              <button 
+                className="PetInfo-btn"
+                onClick={() => setAdopt(!adopt)}
+              >
+                Adoptar
+              </button>
             </div>
             <div className="PetInfo-profile-adopt">
-              <div className="PetInfo-item">
-                <h3>Datos de contacto</h3>
-                <span>Dueño</span>
-                <h4>Gabriel Villegas</h4>
-                <span>Correo:</span>
-                <h4>nspooky@outlook.com</h4>
-              </div>
+              {adop &&
+                <div>
+                  <div className="PetInfo-item">
+                    <h3>Datos de contacto: </h3>
+                    <span>Dueño</span>
+                    <h4>{props.pet.userName}</h4>
+                    <span>Correo:</span>
+                    <h4>{props.pet.userContact}</h4>
+                  </div>
+                  :
+                  <Login />
+                </div>
+              }
             </div>
           </div>
         </div>
@@ -38,5 +52,11 @@ const PetInfo = props => {
     </div>
   )
 }
+
+const mapStateToProps = state => {
+  return {
+    login: state.login,
+  };
+};
 
 export default PetInfo

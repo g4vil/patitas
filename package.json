@@ -22,7 +22,9 @@
   "dependencies": {
     "firebase": "^7.15.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -30,6 +32,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "classnames": "^2.2.6",
     "css-loader": "^3.6.0",
     "dotenv-webpack": "^1.8.0",
     "html-loader": "^0.5.5",

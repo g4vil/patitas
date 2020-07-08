@@ -8,7 +8,7 @@ const Footer = () => (
           Patitas
         </div>
         <div className="Footer-social">
-          Text
+          social
         </div>
       </div>
     </div>

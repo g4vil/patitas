@@ -1,6 +1,6 @@
 import { useState, useEffect} from 'react'
 
-const useGetPets = url => {
+const useGetPets = (url) => {
   //const [estado, funcionQueActualiza] = useState(estado inicial)
   const [pets, setPets] = useState([])
   

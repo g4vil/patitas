@@ -1,21 +1,19 @@
 import React from 'react'
+//Realizar la conexion
+import { connect } from 'react-redux'
 import { auth, provider } from '../utils/firebase'
+import { setUser, setLogin } from '../actions'
 
-const Login = props => {
+const Login = (props) => {
 
   const loginFacebook = () => {
     auth().signInWithPopup(provider)
       .then(({ user }) => {
+        props.setUser(user)
+        props.setLogin(true)
         props.history.push('/panel')
-      })
-  }
-
-  const logoutFacebook = () => {
-    auth().signOut()
-      .then(() => {
-        props.history.push('/')
-      })
-  }
+      });
+  };
 
   return (
     <div className="Login">
@@ -26,12 +24,14 @@ const Login = props => {
             <i className="fab fa-facebook-square"/>
             <span>Iniciar sesion con facebook</span>
           </button>
-          <button onClick={logoutFacebook}>
-            Cerrar sesion
-          </button>
         </div>
       </div>
     </div>
 )}
 
-export default Login
+const mapDispatchToProps = {
+  setUser,
+  setLogin,
+}
+
+export default connect(null, mapDispatchToProps)(Login)

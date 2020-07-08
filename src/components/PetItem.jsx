@@ -28,13 +28,12 @@ const PetItem = props => {
           {props.pet.gender === 'male' && '♂'}
           {props.pet.gender === 'female' && '♀'}
         </i>
-        <p>{props.pet.description}</p>
-        <div className="Pets-date">
-          <i className="fas fa-calendar-alt"/>
-          <br/>
-          <span>{date}</span>
-        </div>
       </div>
+      <p>{props.pet.description}</p>
+      <div className="Pets-date">
+        <i className="fas fa-calendar-alt"/>
+        <span>{date}</span>
+        </div>
     </div>
   </div>
 )}

@@ -8,7 +8,7 @@ const Pet = props => {
   <div className="Pet">
     <div className="Pet-container">
       <div className="Pet-items">
-         <PetInfo pet={pet}/>       
+         <PetInfo pet={pet} />
       </div>
     </div>
   </div>
