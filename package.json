@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gndx/patitas.arepa.dev.git"
+    "url": "git+git@github.com:NSpooky/patitas.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gndx/patitas.arepa.dev/issues"
+    "url": "https://github.com/NSpooky/patitas/issues"
   },
-  "homepage": "https://github.com/gndx/patitas.arepa.dev#readme",
+  "homepage": "https://github.com/NSpooky/patitas#readme",
   "dependencies": {
     "firebase": "^7.15.5",
     "react": "^16.13.1",
