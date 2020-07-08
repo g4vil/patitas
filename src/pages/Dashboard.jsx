@@ -1,9 +1,8 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { setUser, setLogin } from '../actions'
-import { auth } from '../utils/firebase'
-import Form from '../components/Form'
-
+import React from 'react';
+import { connect } from 'react-redux';
+import { setUser, setLogin } from '../actions';
+import { auth } from '../utils/firebase';
+import Form from '../components/Form';
 
 const Dashboard = props => {
 
@@ -13,34 +12,36 @@ const Dashboard = props => {
         props.setUser({});
         props.setLogin(false);
         props.history.push('/')
-      })
+      });
   }
+
   return (
-  <div className="Dashboard">
-    <div className="Dashboard-container">
-      <div className="Dashboard-content">
-        <div className="Dashboard-form">
-          <Form />
-        </div>
-        <div className="Dashboard-profile">
-          <h2>Perfil</h2>
-          <div className="Dashboard-profile-info">
-            <div>
-              <img src={props.user.photoURL} alt={props.user.displayName}/>
-              <span>Nombre:</span>
-              <h4>{props.user.displayName}</h4>
-              <span>Correo:</span>
-              <h4>{props.user.email}</h4>
-              <button onClick={logoutFacebook}>
-                Cerrar sesion
+    <div className="Dashboard">
+      <div className="Dashboard-container">
+        <div className="Dashboard-content">
+          <div className="Dashboard-form">
+            <Form />
+          </div>
+          <div className="Dashboard-profile">
+            <h2>Perfil</h2>
+            <div className="Dashboard-profile-info">
+              <div>
+                <img src={props.user.photoURL} alt={props.user.displayName} />
+                <span>Nombre:</span>
+                <h4>{props.user.displayName}</h4>
+                <span>Correo:</span>
+                <h4>{props.user.email}</h4>
+                <button onClick={logoutFacebook}>
+                  cerrar sesión
               </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-)}
+  );
+}
 
 const mapDispatchToProps = {
   setUser,

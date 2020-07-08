@@ -1,16 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const Nav = props => (
   <div className="Nav">
     <ul>
       <li>
-        <Link to="/"> Inicio </Link>
+        <Link to="/">Inicio</Link>
       </li>
       <li>
         <a onClick={props.showModal}>
-          Dar en adopcion
+          Dar en Adopción
         </a>
       </li>
       <li>
@@ -26,12 +26,12 @@ const Nav = props => (
       </li>
     </ul>
   </div>
-)
+);
 
 const mapStateToProps = state => {
   return {
     login: state.login,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Nav);

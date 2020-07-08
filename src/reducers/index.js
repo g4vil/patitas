@@ -8,11 +8,11 @@ const reducer = (state, action) => {
     case 'SET_LOGIN':
       return {
         ...state,
-        user: action.payload
+        login: action.payload
       }
     default:
       return state;
   }
-}
+};
 
 export default reducer;

@@ -1,7 +1,7 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/storage'
-import 'firebase/database'
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/storage';
+import 'firebase/database';
 
 const config = {
   apiKey: process.env.API_KEY,
@@ -11,11 +11,10 @@ const config = {
   storageBucket: process.env.STORAGE_BUCKET,
   messagingSenderId: process.env.MESSAGING_SENDER_ID,
   appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID,
 };
 
-firebase.initializeApp(config)
-export const { auth } = firebase
-export const storage = firebase.storage()
-export const database = firebase.database()
-export const provider = new firebase.auth.FacebookAuthProvider()
+firebase.initializeApp(config);
+export const { auth } = firebase;
+export const storage = firebase.storage();
+export const database = firebase.database();
+export const provider = new firebase.auth.FacebookAuthProvider();

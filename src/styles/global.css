@@ -28,7 +28,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .Header h1 {
   font-size: 1em;
   font-weight: 400;
@@ -44,9 +43,8 @@ body {
   background-image: linear-gradient(45deg, #282758, #3d4aa2);
 }
 .Header img {
-  width: 40px;
-  height: 40px;
-  margin-right: 5px;
+  width: 54px;
+  height: 26px;
 }
 .Header ul {
   margin: 0;
@@ -105,7 +103,7 @@ body {
   width: 280px;
   margin: 0 auto;
 }
-.Login-btn i {
+.Login i {
   margin: 0 .5em 0 0;
   font-size: 20px;
 }
@@ -150,6 +148,9 @@ body {
 }
 .Home {
   padding: 2em 1em;
+}
+.Home a {
+  text-decoration: none;
 }
 .Home-container {
   grid-template-columns: minmax(auto, 1024px);
@@ -396,6 +397,13 @@ body {
   bottom: 0;
   z-index: 8;
   cursor: pointer;
+}
+.Modal-login {
+  background-color: #fff;
+  padding: 1em;
+  display: block;
+  width: 420px;
+  position: relative;
 }
 .Form {
   background-color: #fff;
